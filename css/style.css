@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2.4rem;
+}
+
+header {
+    position: relative;
+    z-index: 0;
+    background: url('../img/bg-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 0.8rem;
+}
+
+nav ul li img {
+    width: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: #0b9cac;
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+.main p {
+    margin: 1rem 0;
+}
+
+.main form input[type=text] {
+    width: 30%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #0b9cac;
+}
+
+.main form input[type=text]:focus {
+    border: 1px solid #0b9cac;
+}
+
+.main form button[type=submit] {
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    background-color: #0b9cac;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.main form button[type=submit]:hover, nav button:hover {
+    background-color: #fff;
+    color: #0b9cac;
+    border: 1px solid #0b9cac;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .main h1 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    nav ul li img {
+        width: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .main p {
+        font-size: 0.9rem;
+    }
+
+    .main form input[type=text] {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 375px)  {
+    .main h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .main p {
+        font-size: 0.8rem;
+    }
+
+    .main form input[type=text], .main form button[type=submit] {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .main form button[type=submit] {
+        margin-top: 0.4rem;
+    }
+
+    nav ul li img {
+        width: 1rem;
+    }
+}
